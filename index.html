@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="image/png" href="imegs/logo/ChatGPT Image May 31, 2026, 05_15_40 PM.png">
+    <title>Sweet Paradise</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <!-- Navbar الخاص بصفحة index.html -->
+<nav class="navbar" id="mainNav">
+    <a href="#home" class="logo">
+        <img src="imegs/logo/ChatGPT Image May 31, 2026, 04_52_02 PM (2).png" alt="Sweet Paradise Logo" class="navbar-logo-img">
+        <span>Sweet Paradise</span>
+    </a>
+    
+    <div class="nav-right-container">
+        <ul class="nav-links">
+            <li><a href="#home" id="nav-home">Home</a></li>
+            <li><a href="javascript:void(0)" onclick="openMenuModal()" id="nav-menu">Menu</a></li>
+            <li><a href="#about" id="nav-about">About</a></li>
+            <li><a href="#contact" id="nav-contact">Contact</a></li>
+        </ul>
+        <button id="lang-btn" onclick="toggleLanguage()">🇮🇹 Italiano</button>
+    </div>
+</nav>
+    <!-- Home Section -->
+    <header id="home" class="hero-section">
+        <div class="hero-container">
+
+            <!-- الجانب الأيسر: النصوص الترحيبية -->
+            <div class="hero-text-side">
+                <h1 id="hero-title">Welcome to Sweet Paradise</h1>
+                <p id="hero-desc">The finest dessert truck in Paradise Village, Hurghada</p>
+            </div>
+
+            <!-- الجانب الأيمن: معرض صور الأصناف (تم إزالة التكبير) -->
+            <div class="hero-carousel-side">
+                <div class="carousel-wrapper">
+                    <!-- 1. كريب رول -->
+                    <div class="slide smooth-fade">
+                        <img src="https://images.unsplash.com/photo-1519676867240-f03562e64548?w=800&q=80" alt="Crepe Roll">
+                        <div class="slide-caption">Crepe Roll</div>
+                    </div>
+                    <!-- 2. وافل -->
+                    <div class="slide smooth-fade">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/014/593/074/small_2x/delicious-breakfast-with-belgian-waffles-waffels-with-strawberry-and-berry-jam-photo.jpg" alt="Crispy Waffles">
+                        <div class="slide-caption" id="carousel-waffle-caption">Crispy Waffles</div>
+                    </div>
+                    <!-- 3. ميلك شيك -->
+                    <div class="slide smooth-fade">
+                        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=800&q=80" alt="Milkshake">
+                        <div class="slide-caption">Milkshake</div>
+                    </div>
+                    <!-- 4. بان كيك -->
+                    <div class="slide smooth-fade">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80" alt="Pancake">
+                        <div class="slide-caption">Pancake</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Menu Modal -->
+    <div id="menuModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeMenuModal()">×</span>
+            <h2 id="menu-title">Our Sweet Menu</h2>
+            <div class="menu-gallery">
+
+                <a href="waffles.html" style="text-decoration: none;">
+                    <div class="menu-card-button">
+                        <span class="menu-btn-text" id="menu-waffle-text">Crispy Waffles</span>
+                        <i class="fa-solid fa-chevron-right menu-btn-icon"></i>
+                    </div>
+                </a>
+
+                <a href="crepes.html" style="text-decoration: none;">
+                    <div class="menu-card-button">
+                        <span class="menu-btn-text">Crepe Rolls</span>
+                        <i class="fa-solid fa-chevron-right menu-btn-icon"></i>
+                    </div>
+                </a>
+
+                <a href="milkshakes.html" style="text-decoration: none;">
+                    <div class="menu-card-button">
+                        <span class="menu-btn-text">Premium Milkshakes</span>
+                        <i class="fa-solid fa-chevron-right menu-btn-icon"></i>
+                    </div>
+                </a>
+
+                <a href="pancakes.html" style="text-decoration: none;">
+                    <div class="menu-card-button">
+                        <span class="menu-btn-text">Fluffy Pancakes</span>
+                        <i class="fa-solid fa-chevron-right menu-btn-icon"></i>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+        <span class="lightbox-close">×</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged View">
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-card">
+            <h2 id="about-title">Our Story.. How it All Began</h2>
+            <p id="about-p1">
+                In the heart of the magical city of Hurghada, specifically nestled within the elegant streets of
+                <strong>Paradise Village</strong>, the journey of <strong>Sweet Paradise</strong> began as a passionate
+                dream to spread happiness through exquisite tastes. It wasn't just a regular dessert truck; it was born
+                out of a genuine love for crafting luxurious flavors that take you on a journey of pure indulgence.
+            </p>
+            <p id="about-p2">
+                We started by serving the most delicious crepe rolls packed with rich chocolate, fluffy pancakes, and
+                masterfully crafted milkshakes. Every single item we create is made with love and precision to suit the
+                refined taste of the compound’s residents and visitors, making our truck the ultimate destination for
+                sweetness and joyful moments in Hurghada.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="main-footer">
+        <div class="footer-container">
+            
+            <!-- 1. الشمال: بيانات التواصل -->
+            <div class="footer-left">
+                <h3 id="footer-contact-title">Contact Us</h3>
+                <p id="footer-loc"><i class="fa-solid fa-location-dot"></i> Paradise Village, Hurghada</p>
+                <p class="copyright">© 2026 Sweet Paradise. All Rights Reserved.</p>
+            </div>
+            
+            <!-- 2. المنتصف: أيقونات السوشيال ميديا -->
+            <div class="footer-center">
+                <h4 id="footer-social-title">Follow Our Paradise</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/199ARLBfX9/" class="icon facebook" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sweet_paradise_2025?igsh=cmF0N3JnY2h5azNy" class="icon instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/201203628027" class="icon whatsapp" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 3. اليمين: مربع الخريطة التفاعلي الفخم -->
+            <div class="footer-right">
+                <div class="footer-map-wrapper" onclick="openElegantMap(event)">
+                    <div class="map-overlay">
+                        <div class="overlay-content">
+                            <i class="fa-solid fa-map-location-dot animated-icon"></i>
+                        </div>
+                    </div>
+                    <div class="footer-map-box">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Paradise%20Village,%20Hurghada&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="140" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- JavaScript code -->
+    <script>
+        const translations = {
+            en: {
+                btn: "🇮🇹 Italiano", home: "Home", menu: "Menu", about: "About", contact: "Contact",
+                heroTitle: "Welcome to Sweet Paradise", heroDesc: "The finest dessert truck in Paradise Village, Hurghada",
+                menuTitle: "Our Sweet Menu", menuWaffle: "Crispy Waffles", carouselWaffle: "Crispy Waffles",
+                aboutTitle: "Our Story.. How it All Began",
+                aboutP1: "In the heart of the magical city of Hurghada, specifically nestled within the elegant streets of Paradise Village, the journey of Sweet Paradise began as a passionate dream to spread happiness through exquisite tastes. It wasn't just a regular dessert truck; it was born out of a genuine love for crafting luxurious flavors that take you on a journey of pure indulgence.",
+                aboutP2: "We started by serving the most delicious crepe rolls packed with rich chocolate, fluffy pancakes, and masterfully crafted milkshakes. Every single item we create is made with love and precision to suit the refined taste of the compound’s residents and visitors, making our truck the ultimate destination for sweetness and joyful moments in Hurghada.",
+                footerContact: "Contact Us", footerSocial: "Follow Our Paradise", footerLoc: "Paradise Village, Hurghada"
+            },
+            it: {
+                btn: "🇬🇧 English", home: "Home", menu: "Menu", about: "Chi Siamo", contact: "Contatti",
+                heroTitle: "Benvenuti a Sweet Paradise", heroDesc: "Il miglior food truck di dolci a Paradise Village, Hurghada",
+                menuTitle: "Il Nostro Dolce Menu", menuWaffle: "Waffle Croccanti", carouselWaffle: "Waffle Croccanti",
+                aboutTitle: "La Nostra Storia.. Come Tutto È Iniziato",
+                aboutP1: "Nel cuore della magica città di Hurghada, precisamente tra le eleganti strade del Paradise Village, il viaggio di Sweet Paradise è iniziato como un sogno appassionato per diffondere la felicità attraverso gusti squisiti. Non era un semplice food truck di dolci; è nato da un vero amore per la creazione di sapori lussuosi che vi porteranno in un viaggio di pura golosità.",
+                aboutP2: "Abbiamo iniziato servendo i più deliziosi rotoli di crêpe farciti con ricco cioccolato, pancake soffici e milkshake fatti a regola d'arte. Ogni singolo prodotto che creiamo è fatto con amore e precisionه per soddisfare il gusto raffinato dei residenti e dei visitatori del comprensorio, rendendo il nostro truck la destinazione finale per la dolcezza e i momenti di gioia a Hurghada.",
+                footerContact: "Contattaci", footerSocial: "Segui Il Nostro Paradiso", footerLoc: "Paradise Village, Hurghada"
+            }
+        };
+
+        let currentLang = localStorage.getItem('selectedLang') || 'en';
+
+        function toggleLanguage() {
+            document.body.style.transition = "opacity 0.25s ease-in-out";
+            document.body.style.opacity = "0"; 
+            
+            setTimeout(() => {
+                currentLang = currentLang === 'en' ? 'it' : 'en';
+                localStorage.setItem('selectedLang', currentLang); 
+                applyTranslations(currentLang); 
+                document.body.style.opacity = "1"; 
+            }, 250);
+        }
+
+        function applyTranslations(lang) {
+            const langData = translations[lang];
+            document.getElementById('lang-btn').innerText = langData.btn;
+            document.getElementById('nav-home').innerText = langData.home;
+            document.getElementById('nav-menu').innerText = langData.menu;
+            document.getElementById('nav-about').innerText = langData.about;
+            document.getElementById('nav-contact').innerText = langData.contact;
+            document.getElementById('hero-title').innerText = langData.heroTitle;
+            document.getElementById('hero-desc').innerText = langData.heroDesc;
+            document.getElementById('menu-title').innerText = langData.menuTitle;
+            document.getElementById('menu-waffle-text').innerText = langData.menuWaffle;
+            document.getElementById('carousel-waffle-caption').innerText = langData.carouselWaffle;
+            document.getElementById('about-title').innerText = langData.aboutTitle;
+            document.getElementById('about-p1').innerText = langData.aboutP1;
+            document.getElementById('about-p2').innerText = langData.aboutP2;
+            document.getElementById('footer-contact-title').innerText = langData.footerContact;
+            document.getElementById('footer-social-title').innerText = langData.footerSocial;
+            document.getElementById('footer-loc').innerText = langData.footerLoc;
+            document.documentElement.lang = lang;
+        }
+
+        window.onscroll = function() { scrollFunction() };
+        function scrollFunction() {
+            const nav = document.getElementById("mainNav");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                nav.classList.add("scrolled");
+            } else {
+                nav.classList.remove("scrolled");
+            }
+        }
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3800); 
+        }
+
+        function openMenuModal() {
+            document.getElementById("menuModal").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+        function closeMenuModal() {
+            document.getElementById("menuModal").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        function openMenuSpecificLightbox(imagePath) {
+            document.getElementById("lightbox-img").src = imagePath;
+            document.getElementById("lightbox").style.display = "flex";
+        }
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+        function openElegantMap(event) {
+            const wrapper = event.currentTarget;
+            if (wrapper.classList.contains('clicked')) return;
+            wrapper.classList.add('clicked');
+            
+            const googleMapsLink = "https://www.google.com/maps/search/?api=1&query=Paradise+Village+Hurghada";
+            
+            setTimeout(() => {
+                window.open(googleMapsLink, '_blank');
+                wrapper.classList.remove('clicked');
+            }, 400);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            applyTranslations(currentLang);
+
+            const links = document.querySelectorAll("a");
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    const href =  this.getAttribute("href");
+                    if (href && href.includes(".html")) {
+                        e.preventDefault();
+                        document.body.style.transition = "0.4s ease-in-out";
+                        document.body.style.opacity = "0";
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 400);
+                    }
+                });
+            });
+        });
+        // كود ذكي لفتح المنيو تلقائياً لو راجعين من صفحة صنف
+document.addEventListener("DOMContentLoaded", () => {
+    // بيقرأ الرابط ويشوف هل فيه كلمة openMenu=true
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('openMenu') === 'true') {
+        // لو لقاها، بيشغل الفانكشن بتاعت المنيو فوراً بعد ما الصفحة تحمل
+        if (typeof openMenuModal === 'function') {
+            openMenuModal();
+        }
+    }
+});
+    </script>
+</body>
+</html>

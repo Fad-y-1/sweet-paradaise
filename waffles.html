@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="imegs/logo/ChatGPT Image May 31, 2026, 05_15_40 PM.png">
+    <title>Sweet Paradise - Waffles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #fcf8f2; 
+            color: #2b1810; 
+            overflow-x: hidden; 
+            animation: fadeInAnimation 0.6s ease-in-out forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-btn { 
+            position: fixed; 
+            top: 25px; 
+            right: 30px; 
+            background-color: #2b1810; 
+            color: #fcf8f2; 
+            padding: 12px 24px; 
+            border-radius: 25px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 14px;
+            text-transform: uppercase;
+            border: 2px solid #c58940;
+            box-shadow: 0 4px 15px rgba(43, 24, 16, 0.2); 
+            z-index: 1000; 
+            transition: 0.4s ease; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+        }
+        .back-btn:hover { background-color: #c58940; color: #2b1810; transform: scale(1.05); }
+        
+        .menu-container { display: flex; width: 100vw; min-height: 100vh; background-color: #fcf8f2; }
+        
+        /* الجانب الأيسر: متناسق تماماً بنسبة 42% ومزود بالبراند الطاير */
+        .image-side { 
+            width: 42%; 
+            background: url('https://static.vecteezy.com/system/resources/thumbnails/014/593/074/small_2x/delicious-breakfast-with-belgian-waffles-waffels-with-strawberry-and-berry-jam-photo.jpg') center center/cover; 
+            position: relative;
+            border-right: 6px solid #2b1810;
+        }
+
+        .image-brand {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: #fcf8f2;
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 1.1;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        /* الجانب الأيمن: نسبة 58% لتوزيع المساحة بشكل مثالي */
+        .content-side { 
+            width: 58%; 
+            padding: 60px 8%; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+        }
+        
+        .menu-header { text-align: center; margin-top: 20px; margin-bottom: 40px; }
+        .menu-header h1 { font-family: 'Playfair Display', serif; font-size: 48px; margin: 0; color: #2b1810; font-weight: 900; letter-spacing: 1px; }
+        .menu-header .subtitle { display: flex; align-items: center; justify-content: center; gap: 20px; font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 800; letter-spacing: 4px; color: #2b1810; margin-top: 5px; }
+        .menu-header .subtitle::before, .menu-header .subtitle::after { content: ""; display: block; width: 60px; height: 2px; background-color: #2b1810; opacity: 0.6; }
+
+        .category-wrapper { margin-bottom: 35px; }
+        .category-title { background-color: #c58940; color: #fcf8f2; display: inline-block; padding: 6px 30px; border-radius: 20px; font-weight: 700; font-size: 16px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 4px 10px rgba(197, 137, 64, 0.2); }
+        
+        .menu-item { display: flex; align-items: baseline; margin-bottom: 24px; }
+        .item-name { font-family: 'Playfair Display', serif; font-weight: 700; color: #2b1810; font-size: 22px; }
+        .item-dots { flex-grow: 1; border-bottom: 3px dotted rgba(197, 137, 64, 0.5); margin: 0 15px; position: relative; top: -5px; }
+        .item-price { font-family: 'Poppins', sans-serif; font-weight: 700; color: #2b1810; font-size: 24px; }
+
+        .footer-info { border-top: 1px dashed rgba(197, 137, 64, 0.4); padding-top: 20px; display: flex; justify-content: space-between; font-size: 13px; color: #2b1810; font-weight: 600; opacity: 0.8; }
+        .footer-info i { color: #c58940; margin-right: 5px; }
+
+        @media (max-width: 768px) {
+            .menu-container { flex-direction: column; }
+            .image-side { width: 100%; height: 280px; border-right: none; border-bottom: 6px solid #2b1810; }
+            .content-side { width: 100%; padding: 40px 20px 20px; }
+            .menu-header h1 { font-size: 36px; }
+            .menu-header .subtitle { font-size: 26px; }
+            .item-name, .item-price { font-size: 19px; }
+            .back-btn { top: 15px; right: 15px; padding: 8px 16px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html?openMenu=true" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Main</a>
+    
+    <div class="menu-container">
+        <div class="image-side">
+            <div class="image-brand">SWEET<br>PARADISE</div>
+        </div>
+        
+        <div class="content-side">
+            <div style="width: 100%;">
+                <div class="menu-header">
+                    <h1>SWEET PARADISE</h1>
+                    <div class="subtitle">MENU</div>
+                </div>
+                
+                <div class="category-wrapper">
+                    <div class="category-title">WAFFLE</div>
+                    <div class="menu-item"><span class="item-name">Waffle Sugar and Honey</span><span class="item-dots"></span><span class="item-price">50 EGP</span></div>
+                    <div class="menu-item"><span class="item-name">Chocolate Waffle</span><span class="item-dots"></span><span class="item-price">100 EGP</span></div>
+                    <div class="menu-item"><span class="item-name">Waffle Lotus</span><span class="item-dots"></span><span class="item-price">120 EGP</span></div>
+                    <div class="menu-item"><span class="item-name">Waffle Oreo</span><span class="item-dots"></span><span class="item-price">130 EGP</span></div>
+                    <div class="menu-item"><span class="item-name">Kinder Waffle</span><span class="item-dots"></span><span class="item-price">130 EGP</span></div>
+                    <div class="menu-item"><span class="item-name">Waffle Pistachio</span><span class="item-dots"></span><span class="item-price">130 EGP</span></div>
+                </div>
+                
+                <div class="category-wrapper">
+                    <div class="category-title">WAFFLE ICE CREAM</div>
+                    <div class="menu-item"><span class="item-name">Waffle Ice Cream</span><span class="item-dots"></span><span class="item-price">140 EGP</span></div>
+                </div>
+                
+                <div class="category-wrapper">
+                    <div class="category-title">WAFFLE FRUITS</div>
+                    <div class="menu-item"><span class="item-name">Waffle Fruits</span><span class="item-dots"></span><span class="item-price">140 EGP</span></div>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <span><i class="fa-regular fa-clock"></i> Available 07:00 - 11:00</span>
+                <span><i class="fa-solid fa-globe"></i> www.sweet-paradise.com</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // مصفوفة الترجمة المحدثة لتشمل الـ 8 أصناف والـ 3 أقسام بالكامل وبدون أي نقص
+        const subpageTranslations = {
+            en: {
+                back: '<i class="fa-solid fa-arrow-left"></i> Back to Main',
+                badges: ["WAFFLE", "WAFFLE ICE CREAM", "WAFFLE FRUITS"],
+                items: [
+                    "Waffle Sugar and Honey",
+                    "Chocolate Waffle",
+                    "Waffle Lotus",
+                    "Waffle Oreo",
+                    "Kinder Waffle",
+                    "Waffle Pistachio",
+                    "Waffle Ice Cream",
+                    "Waffle Fruits"
+                ],
+                footer1: '<i class="fa-regular fa-clock"></i> Available 07:00 - 11:00',
+                footer2: '<i class="fa-solid fa-globe"></i> www.sweet-paradise.com'
+            },
+            it: {
+                back: '<i class="fa-solid fa-arrow-left"></i> Torna alla Home',
+                badges: ["WAFFLE CLASSICI", "WAFFLE CON GELATO", "WAFFLE CON FRUTTA"],
+                items: [
+                    "Waffle Zucchero e Miele",
+                    "Waffle al Cioccolato",
+                    "Waffle Lotus",
+                    "Waffle Oreo",
+                    "Waffle Kinder",
+                    "Waffle al Pistacchio",
+                    "Waffle con Gelato",
+                    "Waffle con Frutta Fresca"
+                ],
+                footer1: '<i class="fa-regular fa-clock"></i> Disponibile 07:00 - 11:00',
+                footer2: '<i class="fa-solid fa-globe"></i> www.sweet-paradise.com'
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentLang = localStorage.getItem('selectedLang') || 'en';
+            document.documentElement.lang = currentLang;
+            const data = subpageTranslations[currentLang];
+            
+            // ترجمة زر العودة
+            document.querySelector('.back-btn').innerHTML = data.back;
+            
+            // ترجمة أسماء الأقسام (العناوين) ديناميكياً
+            const badgeElements = document.querySelectorAll('.category-title');
+            badgeElements.forEach((badge, idx) => {
+                if(data.badges[idx]) badge.innerText = data.badges[idx];
+            });
+            
+            // ترجمة الأصناف الثمانية بالترتيب الصحيح
+            const itemElements = document.querySelectorAll('.item-name');
+            itemElements.forEach((el, index) => {
+                if(data.items[index]) el.innerText = data.items[index];
+            });
+            
+            // ترجمة بيانات الفوتر
+            const footerSpans = document.querySelectorAll('.footer-info span');
+            if(footerSpans[0]) footerSpans[0].innerHTML = data.footer1;
+            if(footerSpans[1]) footerSpans[1].innerHTML = data.footer2;
+
+            // كود الأنيميشن الناعم عند الخروج والانتقال للمنيو الرئيسي
+            const links = document.querySelectorAll("a");
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    const href = this.getAttribute("href");
+                    if (href && href.includes(".html")) {
+                        e.preventDefault();
+                        document.body.style.transition = "0.4s ease-in-out";
+                        document.body.style.opacity = "0";
+                        setTimeout(() => { window.location.href = href; }, 400);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
